@@ -1,0 +1,129 @@
+﻿
+@{
+    Layout = null;
+}
+
+<style type="text/css">
+    .container {
+        border: 2px solid black;
+        width: 800px;
+        margin: auto;
+    }
+
+    .hl_cyan {
+        font-weight: bold;
+        color: rgb(18, 223, 250);
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .in {
+        margin-right: 0px;
+    }
+
+    .row {
+        display: table;
+        width: 100%;
+        padding: 7px 5px;
+    }
+
+    .col {
+        display: table-cell;
+        width: 25%;
+        padding: 5px;
+    }
+
+    .result {
+        color: red;
+    }
+
+    .fav {
+        font-style: italic;
+    }
+</style>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="~/Scripts/MyJS/Check.js"></script>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Bai1</title>
+</head>
+
+<body>
+    <h2>PHIẾU THAM GIA CLB TIN HỌC <span class="hl_cyan">LUBU</span></h2>
+    <div class="container">
+        <div class="row">
+            <div class="col">Mã sinh viên:</div>
+            <div class="col">
+                <input id="ID" value="" type="text" placeholder="Nhập Mã SV" maxlength="10">
+            </div>
+            <div class="col"><span class="result" id="ID_error"></span></div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">Họ và tên:</div>
+            <div class="col">
+                <input id="name" value="" type="text" placeholder="Nhập Họ và tên" maxlength="30" required>
+            </div>
+            <div class="col"><span class="result" id="name_error"></span></div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">Tuổi:</div>
+            <div class="col">
+                <input id="age" value="" type="text" placeholder="Nhập tuổi > 18">
+            </div>
+            <div class="col"><span class="result" id="age_error"></span></div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">Ngoại ngữ:</div>
+            <div class="col">
+                <input type="checkbox" id="en">Anh
+                <input type="checkbox" id="fr">Pháp
+                <input type="checkbox" id="jp">Nhật
+            </div>
+            <div class="col">
+                <div class="col"><span class="result" id="en_error"></span></div>
+                <div class="col"><span class="result" id="fr_error"></span></div>
+                <div class="col"><span class="result" id="jp_error"></span></div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">Chuyên ngành:</div>
+            <div class="col">
+                <select id="sl">
+                    <option value="ht">Hệ thống</option>
+                    <option id="pm">Phần mềm</option>
+                    <option id="mmt">Mạng máy tính</option>
+                </select>
+            </div>
+            <div class="col"></div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">Sở trường:</div>
+            <div class="col">
+                <span id="ht_error" class="fav"></span>
+                <span id="pm_error" class="fav"></span>
+                <span id="mmt_error" class="fav"></span>
+            </div>
+            <div class="col"></div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <input type="submit" onclick="return validate(); Check();" id="btn" name="btn" value="Đăng ký" />
+            </div>
+            <div style="color: blue; font-style: italic;" class="col" id="check"></div>
+        </div>
+    </div>
+</body>
+
+</html>
